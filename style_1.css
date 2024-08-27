@@ -1,0 +1,136 @@
+body {
+    background-color: rgb(147, 247, 214);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-bottom: 100px; 
+}
+
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 55px;
+    margin: 50px;
+    flex-direction: row;
+}
+
+.image-container {
+    text-align: center;
+    width: 300px;
+    height: 350px;
+    transition: transform 0.5s ease;
+    order: 0;
+}
+
+.image-container img {
+
+    cursor: pointer;
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.image-container img:hover {
+    filter: grayscale(100%) blur(2px);
+}
+
+.click-count {
+
+    font-size: 3.5em;
+    margin-top: 10px;
+    color: #333;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    margin-left: 0; 
+}
+
+.password-box input[type="password"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.password-box button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.password-box button:hover {
+    background-color: #333;
+}
+
+.footer-image {
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.footer-image:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .password-box {
+        margin-bottom: 20px; 
+    }
+}
